@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Saturday Women's Caring and Sharing//Companion//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:weekly-meeting@swcas-coda
+DTSTAMP:20260927T000000Z
+DTSTART:20261003T171500Z
+DURATION:PT1H30M
+RRULE:FREQ=WEEKLY;BYDAY=SA
+SUMMARY:CoDA: Saturday Women's Caring & Sharing
+LOCATION:Church of the Resurrection\, Room #3\, 3201 S Evergreen Rd\, Temp
+ e\, AZ 85282
+DESCRIPTION:Weekly in-person women's CoDA meeting\, Saturdays 10:15 to 11:
+ 45 AM Arizona time. Room #3.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:CoDA meeting in one hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

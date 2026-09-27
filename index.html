@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="assets/theme.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Saturday Women's Caring &amp; Sharing · CoDA, Tempe</title>
+<meta name="description" content="A women's Co-Dependents Anonymous (CoDA) meeting in Tempe, Arizona. Saturdays 10:15 to 11:45 AM, in person at Church of the Resurrection, Room #3. All women are welcome.">
+<meta name="theme-color" content="#fffdf7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111a2c" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Saturday Women's Caring & Sharing">
+<meta property="og:description" content="A women's CoDA meeting in Tempe, AZ. Saturdays 10:15 AM, Church of the Resurrection, Room #3.">
+<meta property="og:image" content="assets/logo-stacked.png">
+<link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .wrap{max-width:760px; margin:0 auto; padding:0 20px;}
+
+  /* Top bar */
+  .top-nav{
+    position:sticky; top:0; z-index:20;
+    background:color-mix(in srgb, var(--bg) 88%, transparent);
+    -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .top-nav .wrap{display:flex; align-items:center; gap:14px; padding-top:10px; padding-bottom:10px;}
+  .top-nav .home{display:flex; align-items:center; gap:9px; text-decoration:none; color:var(--navy); font-family:var(--serif); font-weight:700; font-size:1.08rem; line-height:1.1;}
+  .top-nav .home img{width:34px; height:34px;}
+  .top-nav .links{display:flex; gap:16px; margin-left:auto; font-weight:700; font-size:0.9rem;}
+  .top-nav .links a{color:var(--ink-soft); text-decoration:none;}
+  .top-nav .links a:hover{color:var(--navy);}
+  @media (max-width:640px){ .top-nav .links{display:none;} .top-nav [data-theme-slot]{margin-left:auto;} }
+
+  /* Hero: soft morning sky with a rising sun behind the logo */
+  .hero{
+    position:relative; overflow:hidden; text-align:center;
+    padding:36px 0 44px;
+    background:
+      repeating-conic-gradient(from -90deg at 50% 78%, rgba(247,207,79,0.14) 0deg 4deg, transparent 5deg 13deg),
+      radial-gradient(circle at 50% 78%, rgba(247,207,79,0.50) 0, rgba(247,207,79,0.16) 24%, transparent 50%),
+      linear-gradient(180deg, #cbe7f9 0%, #e8f4fc 45%, #ffffff 100%);
+  }
+  html.dark .hero{
+    background:
+      repeating-conic-gradient(from -90deg at 50% 78%, rgba(245,197,66,0.05) 0deg 4deg, transparent 5deg 13deg),
+      radial-gradient(circle at 50% 78%, rgba(245,197,66,0.22) 0, rgba(245,197,66,0.06) 22%, transparent 48%),
+      linear-gradient(180deg, #1c2d4d 0%, #16233b 50%, var(--bg) 100%);
+  }
+  .cloud{position:absolute; background:#fff; border-radius:999px; opacity:0.75; filter:blur(0.5px);}
+  .cloud::after{content:""; position:absolute; background:inherit; border-radius:50%; width:46%; height:150%; left:22%; bottom:30%;}
+  html.dark .cloud{opacity:0.08;}
+  .c1{width:120px; height:30px; top:48px; left:6%;}
+  .c2{width:90px; height:24px; top:120px; right:7%;}
+  .hero-dove{position:absolute; height:auto; z-index:1;}
+  .d1{width:74px; top:170px; left:4%; transform:scaleX(-1) rotate(-6deg);}
+  .d2{width:54px; top:36px; right:12%; transform:rotate(-8deg); opacity:0.9;}
+  @media (max-width:520px){ .d1{width:56px; top:210px; left:2%;} .d2{width:44px; top:22px; right:6%;} }
+  .hero h1{margin:0; position:relative; z-index:2;}
+  .logo-plate{display:inline-block; padding:10px 12px 4px;}
+  .hero h1 img{display:block; width:min(340px, 78vw); height:auto;}
+  .hero .tag{
+    font-family:var(--serif); font-style:italic; font-size:clamp(1.25rem, 4.6vw, 1.55rem);
+    color:var(--ink); margin:14px auto 4px; max-width:30ch;
+  }
+  .hero .facts{color:var(--ink-soft); font-weight:700; margin:0 0 20px;}
+  .hero .facts span{white-space:nowrap;}
+  .hero .ctas{display:flex; gap:10px; justify-content:center; flex-wrap:wrap;}
+
+  section{padding:8px 0;}
+  .sprig .mini-sun{width:22px; height:22px;}
+  section h2{font-size:clamp(1.7rem, 5.4vw, 2.1rem); margin:6px 0 12px;}
+  .lede{color:var(--ink-soft); margin:0 0 18px;}
+
+  /* Welcome */
+  .welcome{
+    position:relative; padding:26px 24px 22px;
+    background:linear-gradient(160deg, var(--sun-soft), var(--bg-raised) 60%);
+  }
+  .welcome p{margin:0 0 12px;}
+  .welcome p:last-child{margin:0;}
+  .welcome .dove{position:absolute; right:16px; top:14px; width:70px;}
+  .welcome h2{padding-right:70px;}
+
+  /* Where & when */
+  .where{display:grid; gap:16px; grid-template-columns:1fr 1fr;}
+  @media (max-width:640px){ .where{grid-template-columns:1fr;} }
+  .where .card h3{margin:0 0 6px; font-size:1.3rem;}
+  .where .card p{margin:0 0 4px;}
+  .where .muted{color:var(--ink-soft); font-size:0.93rem;}
+  .where .row{display:flex; gap:8px; flex-wrap:wrap; margin-top:14px;}
+  .where .row .btn{padding:10px 16px; font-size:0.88rem;}
+  .icon-head{display:flex; align-items:center; gap:10px; margin-bottom:8px;}
+  .icon-head .ic{width:38px; height:38px; border-radius:50%; background:var(--sky); color:var(--navy); display:grid; place-items:center; flex-shrink:0;}
+  .icon-head .ic svg{width:20px; height:20px;}
+  .icon-head h3{margin:0;}
+  .pills{display:flex; flex-wrap:wrap; gap:8px; margin-top:16px;}
+  .pill{background:var(--sky); color:var(--navy); border-radius:999px; padding:5px 12px; font-size:0.84rem; font-weight:700;}
+  .pill.sun{background:var(--sun-soft); color:var(--sun-ink);}
+
+  /* Newcomers */
+  .expect{list-style:none; padding:0; margin:0; display:grid; gap:12px;}
+  .expect li{display:flex; gap:14px; align-items:flex-start; background:var(--bg-raised); border:1px solid var(--line); border-radius:16px; padding:14px 16px;}
+  .expect .dot{width:30px; height:30px; flex-shrink:0; border-radius:50%; background:var(--sun-soft); color:var(--sun-ink); display:grid; place-items:center; font-weight:800; font-size:0.9rem;}
+  .expect b{display:block; color:var(--ink);}
+  .expect span{color:var(--ink-soft); font-size:0.94rem;}
+
+  /* Readings */
+  .reads{list-style:none; padding:0; margin:0; display:grid; gap:10px; grid-template-columns:1fr 1fr;}
+  @media (max-width:640px){ .reads{grid-template-columns:1fr;} }
+  .reads a{display:block; height:100%; text-decoration:none; background:var(--bg-raised); border:1px solid var(--line); border-radius:16px; padding:14px 16px; color:var(--ink); transition:border-color .15s, transform .15s;}
+  .reads a:hover{border-color:var(--blue); transform:translateY(-1px);}
+  .reads b{display:block; color:var(--navy); font-family:var(--serif); font-size:1.18rem;}
+  .reads b::after{content:" →"; color:var(--sun-ink);}
+  .reads span{display:block; font-size:0.9rem; color:var(--ink-soft);}
+  .fineprint{font-size:0.85rem; color:var(--ink-soft); margin-top:14px;}
+
+  /* App promo */
+  .app-card{display:flex; gap:18px; align-items:center; background:linear-gradient(135deg, var(--sky), var(--bg-raised) 70%);}
+  .app-card img{width:72px; height:72px; flex-shrink:0;}
+  .app-card h3{margin:0 0 4px; font-size:1.4rem;}
+  .app-card p{margin:0 0 12px; color:var(--ink-soft);}
+  @media (max-width:480px){ .app-card{flex-direction:column; text-align:center;} }
+
+  footer{margin-top:48px; padding:28px 0 20px; border-top:1px solid var(--line); color:var(--ink-soft); font-size:0.88rem; text-align:center;}
+  footer p{margin:0 0 8px;}
+  .footer-sun{display:flex; align-items:flex-end; justify-content:center; gap:6px; color:var(--olive); margin-bottom:14px;}
+  .footer-sun svg{width:64px; height:22px;}
+  .footer-sun .flip{transform:scaleX(-1);}
+  .half-sun{width:72px; height:36px; border-radius:72px 72px 0 0; background:radial-gradient(circle at 50% 100%, #fff3c4 0, #f7cf4f 60%, #f0b93a 100%); box-shadow:0 -6px 18px rgba(247,207,79,0.45);}
+  footer{background:linear-gradient(180deg, transparent, var(--sky) 100%); border-radius:24px 24px 0 0;}
+  footer .serenity{font-family:var(--serif); font-style:italic; font-size:1.1rem; color:var(--navy);}
+</style>
+</head>
+<body>
+
+<nav class="top-nav" aria-label="Main">
+  <div class="wrap">
+    <a class="home" href="#top"><img class="mark-img" src="assets/mark.svg" alt="" width="34" height="34">Caring &amp; Sharing</a>
+    <div class="links">
+      <a href="#where">Meeting</a>
+      <a href="#new">New here</a>
+      <a href="#readings">Readings</a>
+      <a href="app/">App</a>
+    </div>
+    <span data-theme-slot></span>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <span class="cloud c1" aria-hidden="true"></span>
+  <span class="cloud c2" aria-hidden="true"></span>
+  <img class="hero-dove d1" src="assets/dove.svg" alt="" aria-hidden="true">
+  <img class="hero-dove d2" src="assets/dove.svg" alt="" aria-hidden="true">
+  <div class="wrap">
+    <h1><span class="logo-plate"><img src="assets/logo-stacked.svg" width="600" height="616" alt="Saturday Women's Caring and Sharing"></span></h1>
+    <p class="tag">A Co-Dependents Anonymous meeting for women, held with warmth every Saturday morning.</p>
+    <p class="facts"><span>Saturdays · 10:15 to 11:45 AM</span> · <span>Tempe, Arizona</span> · <span>In person</span></p>
+    <div class="ctas">
+      <a class="btn" href="#where">Where we meet</a>
+      <a class="btn soft" href="#new">New here?</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div data-next-meeting style="margin-top:-18px; position:relative;"></div>
+
+  <section id="welcome">
+    <div class="card welcome">
+      <img class="dove" src="assets/dove.svg" alt="">
+      <span class="eyebrow">Welcome</span>
+      <h2>You belong here</h2>
+      <p>Saturday Women's Caring &amp; Sharing is a small, friendly women's meeting of Co-Dependents Anonymous. We gather each week to share our experience, strength and hope as we learn to have healthy, loving relationships, starting with ourselves.</p>
+      <p>Whether this is your first meeting or your five-hundredth, there's a seat saved for you. Come as you are.</p>
+    </div>
+  </section>
+
+  <div class="sprig" aria-hidden="true"><svg class="flip" viewBox="0 0 54 18"><path d="M2 12 C16 10 32 8 52 5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><g fill="currentColor"><ellipse cx="12" cy="8" rx="5" ry="2" transform="rotate(-25 12 8)"/><ellipse cx="16" cy="15" rx="5" ry="2" transform="rotate(20 16 15)"/><ellipse cx="27" cy="5" rx="5" ry="2" transform="rotate(-30 27 5)"/><ellipse cx="31" cy="12.5" rx="5" ry="2" transform="rotate(18 31 12.5)"/><ellipse cx="42" cy="2.8" rx="4.5" ry="1.8" transform="rotate(-28 42 2.8)"/><ellipse cx="45" cy="9.5" rx="4.5" ry="1.8" transform="rotate(15 45 9.5)"/></g></svg><svg class="mini-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" fill="#f7cf4f"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1" stroke="#f7cf4f" stroke-width="2" stroke-linecap="round"/></svg><svg viewBox="0 0 54 18"><path d="M2 12 C16 10 32 8 52 5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><g fill="currentColor"><ellipse cx="12" cy="8" rx="5" ry="2" transform="rotate(-25 12 8)"/><ellipse cx="16" cy="15" rx="5" ry="2" transform="rotate(20 16 15)"/><ellipse cx="27" cy="5" rx="5" ry="2" transform="rotate(-30 27 5)"/><ellipse cx="31" cy="12.5" rx="5" ry="2" transform="rotate(18 31 12.5)"/><ellipse cx="42" cy="2.8" rx="4.5" ry="1.8" transform="rotate(-28 42 2.8)"/><ellipse cx="45" cy="9.5" rx="4.5" ry="1.8" transform="rotate(15 45 9.5)"/></g></svg></div>
+
+  <section id="where">
+    <span class="eyebrow">When &amp; where</span>
+    <h2>Join us on Saturday morning</h2>
+    <div class="where">
+      <div class="card">
+        <div class="icon-head">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <h3>Every Saturday</h3>
+        </div>
+        <p><strong>10:15 to 11:45 AM</strong> Arizona time, in person</p>
+        <p class="muted">Arizona doesn't change clocks, so it's the same time all year.</p>
+        <div class="row">
+          <a class="btn soft" href="app/meeting.ics"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M12 13v5M9.5 15.5h5"/></svg>Add to calendar</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="icon-head">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+          <h3>Church of the Resurrection</h3>
+        </div>
+        <p><strong>Room #3</strong></p>
+        <p>3201 S Evergreen Rd<br>Tempe, AZ 85282</p>
+        <div class="row">
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Church+of+the+Resurrection+3201+S+Evergreen+Rd+Tempe+AZ+85282" target="_blank" rel="noopener">Google Maps</a>
+          <a class="btn soft" href="https://maps.apple.com/?q=Church+of+the+Resurrection&amp;address=3201+S+Evergreen+Rd,+Tempe,+AZ+85282" target="_blank" rel="noopener">Apple Maps</a>
+        </div>
+      </div>
+    </div>
+    <div class="pills">
+      <span class="pill">Women's meeting</span>
+      <span class="pill">In person only</span>
+      <span class="pill sun">Newcomers welcome</span>
+      <span class="pill">No fees or sign-up</span>
+    </div>
+  </section>
+
+  <div class="sprig" aria-hidden="true"><img src="assets/dove.svg" alt=""></div>
+
+  <section id="new">
+    <span class="eyebrow">New here?</span>
+    <h2>Your first meeting</h2>
+    <p class="lede">It's normal to feel nervous. Here's what a Saturday morning with us is like.</p>
+    <ol class="expect">
+      <li><span class="dot">1</span><div><b>Come a few minutes early</b><span>Head to Room #3. Someone will say hello and help you find a seat.</span></div></li>
+      <li><span class="dot">2</span><div><b>Listen as long as you like</b><span>You never have to share. Saying "I'll pass" is always fine.</span></div></li>
+      <li><span class="dot">3</span><div><b>We read, then we share</b><span>A few short CoDA readings open the meeting, then members take turns sharing without crosstalk or advice.</span></div></li>
+      <li><span class="dot">4</span><div><b>What's said here stays here</b><span>We use first names only, and we keep each other's stories private.</span></div></li>
+      <li><span class="dot">5</span><div><b>There's no cost</b><span>A basket is passed to cover rent and literature. Giving is optional, and newcomers are asked to keep their money.</span></div></li>
+    </ol>
+    <p style="margin-top:18px;"><a class="btn soft" href="docs/newcomers.html">More for newcomers</a></p>
+  </section>
+
+  <div class="sprig" aria-hidden="true"><svg class="flip" viewBox="0 0 54 18"><path d="M2 12 C16 10 32 8 52 5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><g fill="currentColor"><ellipse cx="12" cy="8" rx="5" ry="2" transform="rotate(-25 12 8)"/><ellipse cx="16" cy="15" rx="5" ry="2" transform="rotate(20 16 15)"/><ellipse cx="27" cy="5" rx="5" ry="2" transform="rotate(-30 27 5)"/><ellipse cx="31" cy="12.5" rx="5" ry="2" transform="rotate(18 31 12.5)"/><ellipse cx="42" cy="2.8" rx="4.5" ry="1.8" transform="rotate(-28 42 2.8)"/><ellipse cx="45" cy="9.5" rx="4.5" ry="1.8" transform="rotate(15 45 9.5)"/></g></svg><svg class="mini-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" fill="#f7cf4f"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1" stroke="#f7cf4f" stroke-width="2" stroke-linecap="round"/></svg><svg viewBox="0 0 54 18"><path d="M2 12 C16 10 32 8 52 5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><g fill="currentColor"><ellipse cx="12" cy="8" rx="5" ry="2" transform="rotate(-25 12 8)"/><ellipse cx="16" cy="15" rx="5" ry="2" transform="rotate(20 16 15)"/><ellipse cx="27" cy="5" rx="5" ry="2" transform="rotate(-30 27 5)"/><ellipse cx="31" cy="12.5" rx="5" ry="2" transform="rotate(18 31 12.5)"/><ellipse cx="42" cy="2.8" rx="4.5" ry="1.8" transform="rotate(-28 42 2.8)"/><ellipse cx="45" cy="9.5" rx="4.5" ry="1.8" transform="rotate(15 45 9.5)"/></g></svg></div>
+
+  <section id="readings">
+    <span class="eyebrow">Readings</span>
+    <h2>CoDA literature</h2>
+    <p class="lede">These open on CoDA's official website, so you're always reading the current, approved text.</p>
+    <ul class="reads">
+      <li><a href="https://coda.org/meeting-materials/twelve-steps/" target="_blank" rel="noopener"><b>The Twelve Steps</b><span>The heart of the CoDA program</span></a></li>
+      <li><a href="https://coda.org/meeting-materials/twelve-traditions/" target="_blank" rel="noopener"><b>The Twelve Traditions</b><span>How our groups stay healthy and united</span></a></li>
+      <li><a href="https://coda.org/meeting-materials/twelve-promises/" target="_blank" rel="noopener"><b>The Twelve Promises</b><span>What we can hope for in recovery</span></a></li>
+      <li><a href="https://coda.org/meeting-materials/" target="_blank" rel="noopener"><b>Meeting materials</b><span>Preamble, Welcome, Patterns &amp; Characteristics and more</span></a></li>
+      <li><a href="https://www.corepublications.org/product/newcomers-handbook" target="_blank" rel="noopener"><b>Newcomer's Handbook</b><span>A gentle first read, from CoRe Publications</span></a></li>
+      <li><a href="https://www.corepublications.org/" target="_blank" rel="noopener"><b>The CoDA Book &amp; more</b><span>Books and workbooks from CoRe, CoDA's publisher</span></a></li>
+    </ul>
+    <p class="fineprint">CoDA literature is copyrighted by Co-Dependents Anonymous, Inc., so we link to it rather than copying it here.</p>
+  </section>
+
+  <div class="sprig" aria-hidden="true"><img class="flip" src="assets/dove.svg" alt=""></div>
+
+  <section id="app">
+    <div class="card app-card">
+      <img class="mark-img" src="assets/mark.svg" alt="" width="72" height="72">
+      <div>
+        <h3>Our companion app</h3>
+        <p>A private recovery counter, a daily check-in, and a countdown to Saturday. Everything stays on your own phone.</p>
+        <a class="btn sun" href="app/">Open the app</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-sun" aria-hidden="true"><svg class="flip" viewBox="0 0 54 18"><path d="M2 12 C16 10 32 8 52 5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><g fill="currentColor"><ellipse cx="12" cy="8" rx="5" ry="2" transform="rotate(-25 12 8)"/><ellipse cx="16" cy="15" rx="5" ry="2" transform="rotate(20 16 15)"/><ellipse cx="27" cy="5" rx="5" ry="2" transform="rotate(-30 27 5)"/><ellipse cx="31" cy="12.5" rx="5" ry="2" transform="rotate(18 31 12.5)"/><ellipse cx="42" cy="2.8" rx="4.5" ry="1.8" transform="rotate(-28 42 2.8)"/><ellipse cx="45" cy="9.5" rx="4.5" ry="1.8" transform="rotate(15 45 9.5)"/></g></svg><span class="half-sun"></span><svg viewBox="0 0 54 18"><path d="M2 12 C16 10 32 8 52 5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><g fill="currentColor"><ellipse cx="12" cy="8" rx="5" ry="2" transform="rotate(-25 12 8)"/><ellipse cx="16" cy="15" rx="5" ry="2" transform="rotate(20 16 15)"/><ellipse cx="27" cy="5" rx="5" ry="2" transform="rotate(-30 27 5)"/><ellipse cx="31" cy="12.5" rx="5" ry="2" transform="rotate(18 31 12.5)"/><ellipse cx="42" cy="2.8" rx="4.5" ry="1.8" transform="rotate(-28 42 2.8)"/><ellipse cx="45" cy="9.5" rx="4.5" ry="1.8" transform="rotate(15 45 9.5)"/></g></svg></div>
+    <p class="serenity">Keep coming back. It works when we work it.</p>
+    <p>Find more meetings at <a href="https://coda.org/find-a-meeting/" target="_blank" rel="noopener">coda.org</a>. Our listing: <a href="https://coda.org/meeting/womens-sharing-caring-coda-group/" target="_blank" rel="noopener">WOMEN'S Sharing is Caring</a>.</p>
+    <p>This site is kept by members of our group. It is not an official website of Co-Dependents Anonymous, Inc.</p>
+  </footer>
+
+</main>
+
+<script src="assets/ui.js"></script>
+</body>
+</html>
